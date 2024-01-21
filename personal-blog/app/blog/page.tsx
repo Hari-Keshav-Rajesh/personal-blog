@@ -12,14 +12,14 @@ import {
     CardTitle,
   } from '@/components/ui/card';
 
-export async function getPosts() {
-  const res = await fetch(
-    `https://notion-api.splitbee.io/v1/table/${siteConfig.notionID}`,
-    { next: { revalidate: 60 } }
-  );
-  const posts = await res.json();
-  return posts;
-}
+  async function getPosts() {
+    const res = await fetch(
+      `https://notion-api.splitbee.io/v1/table/${siteConfig.notionID}`,
+      { next: { revalidate: 60 } }
+    );
+    const posts = await res.json();
+    return posts;
+  }
 
 export default async function Blog(){
 

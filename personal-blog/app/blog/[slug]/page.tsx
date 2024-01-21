@@ -4,11 +4,20 @@ import Link from "next/link";
 
 import { Icons } from "@/config/icons";
 
+import { siteConfig } from "@/config/site.config";
+
 import "@/lib/styles.css";
 
-import { getPosts } from "../page";
-
 import { formatDate } from "@/lib/formatDate";
+
+async function getPosts() {
+  const res = await fetch(
+    `https://notion-api.splitbee.io/v1/table/${siteConfig.notionID}`,
+    { next: { revalidate: 60 } }
+  );
+  const posts = await res.json();
+  return posts;
+}
 
 async function getBlocks({ params: { slug } }: { params: { slug: any } }) {
     const posts = await getPosts();
