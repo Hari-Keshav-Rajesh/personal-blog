@@ -12,7 +12,7 @@ import SiteSheet from "../site-sheet"
 export default function SiteHeader(){
 
     return(
-        <>
+        <div className="block">
 
             <div className=" hidden lg:flex justify-center gap-16 py-c2 ">
                 <Link href={siteConfig.links.instagram}>
@@ -44,7 +44,7 @@ export default function SiteHeader(){
             </div>
 
 
-        </>
+        </div>
     )
 
 }
