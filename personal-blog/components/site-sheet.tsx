@@ -6,6 +6,8 @@ import { Icons } from "@/config/icons";
 
 import { navlinks } from "@/config/navlinks";
 
+import { siteConfig } from "@/config/site.config";
+
 import Link from "next/link";
 
 
@@ -45,9 +47,15 @@ export default function SiteSheet(){
           </div>
 
             <div className="flex justify-center gap-8 px-c1">
-                <Icons.instagram className="h-6 w-6 md:h-8 md:w-8" />
-                <Icons.twitter className="h-6 w-6 md:h-8 md:w-8" />
-                <Icons.linkedin className="h-6 w-6 md:h-8 md:w-8" />
+            <Link href={siteConfig.links.instagram}>
+                    <Icons.instagram className="h-6 w-6 md:h-8 md:w-8" />
+                </Link>
+                <Link href={siteConfig.links.twitter}>
+                    <Icons.twitter className="h-6 w-6 md:h-8 md:w-8" />
+                </Link>
+                <Link href={siteConfig.links.linkedin}>
+                    <Icons.linkedin className="h-6 w-6 md:h-8 md:w-8" />
+                </Link>
             </div>
 
         </div>

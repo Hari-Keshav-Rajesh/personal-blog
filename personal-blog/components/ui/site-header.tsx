@@ -1,5 +1,7 @@
 import { navlinks } from "@/config/navlinks"
 
+import { siteConfig } from "@/config/site.config"
+
 import { Icons } from "@/config/icons"
 
 import Link from "next/link"
@@ -13,9 +15,15 @@ export default function SiteHeader(){
         <>
 
             <div className=" hidden lg:flex justify-center gap-16 py-c2 ">
-                <Icons.instagram className="h-6 w-6" />
-                <Icons.twitter className="h-6 w-6" />
-                <Icons.linkedin className="h-6 w-6" />
+                <Link href={siteConfig.links.instagram}>
+                    <Icons.instagram className="h-6 w-6" />
+                </Link>
+                <Link href={siteConfig.links.twitter}>
+                    <Icons.twitter className="h-6 w-6" />
+                </Link>
+                <Link href={siteConfig.links.linkedin}>
+                    <Icons.linkedin className="h-6 w-6" />
+                </Link>
             </div>
 
             <div className="flex justify-between lg:block content-center px-c2 py-c6 lg:py-c2 lg:px-0">
