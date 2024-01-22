@@ -51,7 +51,7 @@ export default function HomeCarousel({blogs}: any){
                     delay: 2000,
                     }),
                 ]}
-                className="w-full lg:w-c40 h-fit bg-opacity-70 shadow-md hover:bg-opacity-100 hover:shadow-lg text-center"
+                className="w-full lg:w-c30 h-fit bg-opacity-70 shadow-md hover:bg-opacity-100 hover:shadow-lg text-center"
             >
 
                 <CarouselContent>
