@@ -4,11 +4,13 @@ import { siteConfig } from "@/config/site.config"
 
 import { Icons } from "@/config/icons"
 
-import { jet } from "@/app/layout"
-
 import Link from "next/link"
 
 import SiteSheet from "../site-sheet"
+
+import { JetBrains_Mono } from "next/font/google"
+
+const jet = JetBrains_Mono({ subsets: ["latin"] })
 
 
 export default function SiteHeader(){
@@ -30,7 +32,7 @@ export default function SiteHeader(){
 
             <div className="flex justify-between lg:block content-center px-c2 py-c6 lg:py-c2 lg:px-0">
                 <div className="text-center font-bold text-4xl md:text-6xl lg:text-8xl">
-                    <div className={jet.className}>
+                    <div>
                     This Is My Title
                     </div>
                 </div>

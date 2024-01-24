@@ -1,12 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import SiteHeader from "@/components/ui/site-header";
 
 const inter = Inter({ subsets: ["latin"] });
-
-export const jet = JetBrains_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
