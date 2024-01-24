@@ -57,13 +57,14 @@ export default function HomeCarousel({blogs}: any){
                 <CarouselContent>
                     {posts.map((post:any) => (
                         <CarouselItem key={post.id}>
-                            <Card className="h-fit">
+                            <Card className="h-fit bg-cover" style={{ backgroundImage: `url(${post.image_link})` }}>
+                            <div className="inset-0 bg-black bg-opacity-5"></div>
                                 <CardHeader>
                                     <CardTitle>{post.title}</CardTitle>
                                 </CardHeader>
                                 <CardContent>
-                                    <p className="text-sm">{formatDate(post.date)}</p>
-                                    <p className="text-sm">{post.author}</p>
+                                    <div className="text-sm">{formatDate(post.date)}</div>
+                                    <div className="text-sm">{post.author}</div>
                                     <div className="pb-0 pt-2">
                                         {post.tags?.map((tag: any) => (
                                             <span
