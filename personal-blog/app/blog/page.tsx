@@ -43,7 +43,7 @@ export default async function Blog(){
                     <div className="mt-c5" key={post.id}>
                       <Link href="/slug" as={`blog/${post.slug}`}>
                         <Card 
-                        className="flex h-fit w-c80 flex-col bg-cover bg-opacity-100 shadow-md duration-300 ease-in-out hover:scale-105 hover:bg-opacity-100 hover:shadow-lg  md:w-c40 xl:w-c25" 
+                        className="flex h-fit w-c80 flex-col bg-cover bg-opacity-100 shadow-md duration-300 ease-in-out hover:scale-105 hover:bg-opacity-100 hover:shadow-lg  md:w-c40 xl:w-c25 border-none" 
                         style={{ backgroundImage: `url(${post.image_link})` }}
                         >
                           <div className="inset-0 bg-black bg-opacity-5"></div>

@@ -57,7 +57,7 @@ export default function HomeCarousel({blogs}: any){
                 <CarouselContent>
                     {posts.map((post:any) => (
                         <CarouselItem key={post.id}>
-                            <Card className="h-fit bg-cover" style={{ backgroundImage: `url(${post.image_link})` }}>
+                            <Card className="h-fit bg-cover border-none" style={{ backgroundImage: `url(${post.image_link})` }}>
                             <div className="inset-0 bg-black bg-opacity-5"></div>
                                 <CardHeader>
                                     <CardTitle>{post.title}</CardTitle>
