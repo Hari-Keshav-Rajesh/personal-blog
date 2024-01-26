@@ -4,12 +4,11 @@ import Link from "next/link";
 
 import { formatDate } from "@/lib/formatDate";
 
+import Image from "next/image";
+
 import {
     Card,
     CardContent,
-    CardFooter,
-    CardHeader,
-    CardTitle,
   } from '@/components/ui/card';
 
   async function getPosts() {
@@ -43,25 +42,27 @@ export default async function Blog(){
                     <div className="mt-c5" key={post.id}>
                       <Link href="/slug" as={`blog/${post.slug}`}>
                         <Card 
-                        className="flex h-fit w-c80 flex-col bg-cover bg-opacity-100 shadow-md duration-300 ease-in-out hover:scale-105 hover:bg-opacity-100 hover:shadow-lg  md:w-c40 xl:w-c25 border-none" 
-                        style={{ backgroundImage: `url(${post.image_link})` }}
+                        className="bg-inherit text-inherit h-fit w-fit bg-opacity-100 shadow-md duration-300 ease-in-out hover:scale-105 hover:bg-opacity-100 hover:shadow-lg border-none" 
                         >
-                          <div className="inset-0 bg-black bg-opacity-5"></div>
-                          <CardHeader>
-                            <div className="text-md font-light dark:font-extralight">
-                              {formatDate(post.date)}
-                            </div>
-                            <CardTitle className="flex flex-col justify-center">
-                              <div className="flex text-2xl font-bold">
-                                {post.title}
+                          <CardContent className="p-8 bg-purple-900 bg-opacity-20 hover:bg-opacity-40">
+                            <div className="flex flex-col gap-5">
+
+                              <div>
+                                <Image
+                                  src={post.image_link}
+                                  alt={post.title}
+                                  width={400}
+                                  height={400} 
+                                  unoptimized={true}
+                                />
                               </div>
-                            </CardTitle>
-                          </CardHeader>
-                          <CardContent>
-                            <div className="h-fit overflow-clip text-sm font-medium dark:font-light">
-                              {post.description}
-                            </div>
-                            <div className="px-1 pb-0 pt-2">
+
+                              <div className="flex flex-col">
+                                <div className="text-sm">{formatDate(post.date)}</div>
+                                <div className="text-2xl font-bold">{post.title}</div>
+                              </div>
+                                
+                              <div className="px-1 pb-0 pt-1">
                               {post.tags?.map((tag: any) => (
                                 <span
                                   key={tag}
@@ -71,14 +72,9 @@ export default async function Blog(){
                                 </span>
                               ))}
                             </div>
-                          </CardContent>
-                          <CardFooter className="flex gap-3">
-                            <div className="flex flex-col">
-                              <div className="text-md font-semibold dark:font-medium">
-                                Author
-                              </div>
+
                             </div>
-                          </CardFooter>
+                          </CardContent>
                         </Card>
                       </Link>
                     </div>
@@ -91,7 +87,6 @@ export default async function Blog(){
         </div>
       );
     }
-
 
 
 

@@ -1,4 +1,5 @@
 import { ArrowLeft,
+    ArrowRight,
     Instagram,
     Twitter,
     Linkedin,
@@ -7,6 +8,7 @@ import { ArrowLeft,
 
 export const Icons = {
     arrowLeft : ArrowLeft,
+    arrowRight: ArrowRight,
     instagram : Instagram,
     twitter: Twitter,
     linkedin: Linkedin,

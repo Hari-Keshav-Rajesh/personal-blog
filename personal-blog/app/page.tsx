@@ -1,6 +1,6 @@
 import { siteConfig } from "@/config/site.config";
 
-import HomeCarousel from "./home/homeCarousel"
+import BlogBox from "./home/blogBox";
 
 async function getPosts() {
   const res = await fetch(
@@ -17,7 +17,12 @@ export default async function Home(){
 
   return(
     <div>
-      <HomeCarousel blogs={posts} />
+      
+      <div className="mt-5">
+        <BlogBox blogs={posts.reverse()} />
+      </div>
+
+
     </div>
   )
 

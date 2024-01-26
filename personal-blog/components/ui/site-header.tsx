@@ -10,6 +10,8 @@ import SiteSheet from "../site-sheet"
 
 import { JetBrains_Mono } from "next/font/google"
 
+import Image from "next/image"
+
 const jet = JetBrains_Mono({ subsets: ["latin"] })
 
 
@@ -33,7 +35,7 @@ export default function SiteHeader(){
             <div className="flex justify-between lg:block content-center px-c2 py-c6 lg:py-c2 lg:px-0">
                 <div className="text-center font-bold text-4xl md:text-6xl lg:text-8xl">
                     <div>
-                    This Is My Title
+                    Sathvika's Blog
                     </div>
                 </div>
                 <SiteSheet />
@@ -54,3 +56,4 @@ export default function SiteHeader(){
     )
 
 }
+

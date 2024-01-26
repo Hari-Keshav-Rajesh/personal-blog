@@ -71,6 +71,6 @@
     @apply border-border;
   }
   body {
-    @apply bg-gradient-to-r from-purple-900 via-red-500 to-purple-900 text-violet-100;
+    @apply bg-gradient-to-r from-purple-900 via-red-500 to-purple-800 text-violet-100;
   }
 }
