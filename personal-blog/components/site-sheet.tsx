@@ -37,7 +37,7 @@ export default function SiteSheet(){
                 item.href && (
                   <SheetClose asChild key={index}>
                     <Link href={item.href}>
-                      <button className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-slate-200">
+                      <button className="text-3xl md:text-5xl font-bold">
                         {item.label}
                       </button>
                     </Link>
