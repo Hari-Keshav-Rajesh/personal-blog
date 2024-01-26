@@ -24,7 +24,7 @@ export default function BlogBox({blogs}: {blogs: any[]}){
                 <div className='w-full lg:w-1/2'>
                     <Link href="/blog/slug" as={`blog/${post.slug}`}>
                     <Card className='bg-inherit text-inherit border-0'>
-                        <CardContent className='bg-purple-900 bg-opacity-20'>
+                        <CardContent className='bg-purple-900 bg-opacity-20 hover:bg-opacity-100'>
 
                             <div className="flex flex-col gap-10">
 

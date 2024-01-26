@@ -4,5 +4,6 @@ export const siteConfig = {
         instagram:"https://www.instagram.com/",
         twitter: "https://twitter.com/",
         linkedin: "https://www.linkedin.com/"
-    }
+    },
+    title: "Personal Blog"
 };
