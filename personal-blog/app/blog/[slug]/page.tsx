@@ -75,7 +75,7 @@ export default async function BlogPost({
             </div>
 
             <Link href="/blog">
-                <div className="mt-5 flex items-center pt-2 text-base font-medium text-muted-foreground transition-colors hover:text-foreground/80">
+                <div className="mt-5 flex items-center pt-2 text-base font-light hover:font-bold">
                 <Icons.arrowLeft className="h-5 w-5" />
                 <div>Back to Blog</div>
                 </div>
