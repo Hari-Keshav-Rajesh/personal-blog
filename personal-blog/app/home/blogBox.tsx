@@ -43,7 +43,7 @@ export default function BlogBox({blogs}: {blogs: any[]}){
                             </div>
 
                             <div>
-                                <p className="text-sm lg:text-lg">{post.description}</p>
+                                <div className="text-sm lg:text-lg">{post.description}</div>
                             </div>
 
                             <div className='flex justify-between'>
