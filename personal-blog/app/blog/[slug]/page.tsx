@@ -56,12 +56,18 @@ export default async function BlogPost({
 
             <div className="mt-c20 px-0 pb-c3 md:mt-c10 xl:mt-c5 xl:px-c8">
 
-            <div 
-            className="mb-14 flex flex-col gap-4 p-10 lg:p-14 xl:p-20 bg-cover"
-            style={{ backgroundImage: `url(${post.image_link})` }}>
-              <div className="inset-0 bg-black bg-opacity-5"></div>
-              <div className="text-md md:text-lg lg:text-xl xl:text-2xl font-medium">{formatDate(post.date)}</div>
+            <div className="mb-14 flex flex-col gap-6">
               <div className="text-4xl font-bold">{post.title}</div>
+              <div className="flex flex-col lg:flex-row items-start lg:items-center gap-4 lg:gap-8">
+                <div className="flex">
+                  <div><Icons.calendar className="w-8 h-8"/></div>
+                  <div className="text-lg font-medium">{formatDate(post.date)}</div>
+                </div> 
+                <div className="flex">
+                  <div><Icons.clock className="w-8 h-8"/></div>
+                  <div className="text-lg font-medium">{post.read_time}</div>
+                </div>
+              </div>
             </div>
 
             <div>
@@ -69,7 +75,7 @@ export default async function BlogPost({
             </div>
 
             <Link href="/blog">
-                <div className="mt-5 flex items-center pt-2 text-base font-medium text-muted-foreground transition-colors hover:text-foreground/80">
+                <div className="mt-5 flex items-center pt-2 text-base font-light hover:font-bold">
                 <Icons.arrowLeft className="h-5 w-5" />
                 <div>Back to Blog</div>
                 </div>

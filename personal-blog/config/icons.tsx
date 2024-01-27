@@ -3,7 +3,9 @@ import { ArrowLeft,
     Instagram,
     Twitter,
     Linkedin,
-    Menu
+    Menu,
+    Calendar,
+    Clock
  } from "lucide-react";
 
 export const Icons = {
@@ -12,5 +14,7 @@ export const Icons = {
     instagram : Instagram,
     twitter: Twitter,
     linkedin: Linkedin,
-    menu: Menu
+    menu: Menu,
+    calendar: Calendar,
+    clock: Clock
 };
