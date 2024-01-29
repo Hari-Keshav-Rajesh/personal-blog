@@ -13,16 +13,19 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
+    <>
     <html lang="en" suppressHydrationWarning>
+      <head />
       <body className={inter.className}>
         <SiteHeader />
         <div className="mx-10">{children}</div>
         <SiteFooter />
       </body>
     </html>
+    </>
   );
 }

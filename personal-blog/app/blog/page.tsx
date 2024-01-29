@@ -81,7 +81,7 @@ export default async function Blog(){
                   );
                 })
             ) : (
-              <p>No posts available.</p>
+              <div>No posts available.</div>
             )}
           </div>
         </div>
