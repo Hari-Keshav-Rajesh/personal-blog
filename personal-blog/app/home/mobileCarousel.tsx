@@ -38,8 +38,7 @@ export default function MobileCarousel({blogs}: any){
     }
 
     return(
-        <div className="flex flex-col justify-center items-center mt-c15 md:mt-c5 xl:mt-c3">
-          <div>
+        <div className="mt-c15 md:mt-c5 xl:mt-c3">
             <Carousel
                 opts={{
                     align: 'start',
@@ -48,14 +47,12 @@ export default function MobileCarousel({blogs}: any){
                     containScroll: 'trimSnaps',
                 }}
 
-                className="w-full md:w-c60 lg:w-c40 h-fit bg-opacity-70 shadow-md hover:bg-opacity-100 hover:shadow-lg text-center"
+                className="w-full lg:w-c40 h-fit bg-opacity-70 shadow-md hover:bg-opacity-100 hover:shadow-lg text-center"
             >
 
                 <CarouselContent>
                     {posts.map((post:any,index:number) => (
-                        <CarouselItem 
-                          key={post.id}
-                        >
+                        <CarouselItem key={post.id}>
                             <Link href="/slug" as={`blog/${post.slug}`}>
                         <Card 
                         className="bg-inherit text-inherit h-fit w-fit bg-opacity-100 shadow-md duration-300 ease-in-out hover:scale-105 hover:bg-opacity-100 hover:shadow-lg border-none" 
@@ -116,7 +113,6 @@ export default function MobileCarousel({blogs}: any){
                     ))}
                 </CarouselContent>
             </Carousel>
-            </div>
             <div className='text-sm font-light italic'>Swipe to see all</div>
 
         </div>
