@@ -5,5 +5,6 @@ export const siteConfig = {
         twitter: "https://twitter.com/",
         linkedin: "https://www.linkedin.com/"
     },
-    title: "Personal Blog"
+    title: "Personal Blog",
+    url:"https://personal-blog-omega-ivory.vercel.app/"
 };
