@@ -38,10 +38,10 @@ export default function MobileCarousel({blogs}: any){
     }
 
     return(
-        <div className="mt-c15 md:mt-c5 xl:mt-c3">
+        <div className="mt-c15 md:mt-c5 xl:mt-c3 block">
             <Carousel
                 opts={{
-                    align: 'start',
+                    align: 'center',
                     loop: true,
                     dragFree: true,
                     containScroll: 'trimSnaps',
@@ -112,7 +112,7 @@ export default function MobileCarousel({blogs}: any){
                         </CarouselItem>
                     ))}
                 </CarouselContent>
-            </Carousel>
+              </Carousel>
             <div className='text-sm font-light italic'>Swipe to see all</div>
 
         </div>

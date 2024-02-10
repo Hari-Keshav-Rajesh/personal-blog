@@ -20,11 +20,11 @@ export default async function Home(){
   return(
     <div>
       
-      <div className="mt-5 hidden lg:block">
+      <div className="mt-5 hidden md:block">
         <BlogBox blogs={posts.reverse()} />
       </div>
 
-      <div className="mt-5 block lg:hidden">
+      <div className="mt-5 block md:hidden">
          <MobileCarousel blogs={posts} />
       </div>
 

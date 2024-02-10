@@ -80,7 +80,7 @@ export default function BlogBox({blogs}: {blogs: any[]}){
                     </Link>
                 </div>
 
-                <div className='w-fit lg:w-1/2'>
+                <div className='w-full lg:w-1/2 flex justify-center flex-col items-center gap-4 lg:block'>
                 {posts.map((post:any)=>{
                         return(
                             <div 
