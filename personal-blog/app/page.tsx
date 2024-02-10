@@ -2,6 +2,8 @@ import { siteConfig } from "@/config/site.config";
 
 import BlogBox from "./home/blogBox";
 
+import MobileCarousel from "./home/mobileCarousel";
+
 async function getPosts() {
   const res = await fetch(
     `https://notion-api.splitbee.io/v1/table/${siteConfig.notionID}`,
@@ -18,10 +20,13 @@ export default async function Home(){
   return(
     <div>
       
-      <div className="mt-5">
+      <div className="mt-5 hidden md:block">
         <BlogBox blogs={posts.reverse()} />
       </div>
 
+      <div className="mt-5 block md:hidden">
+         <MobileCarousel blogs={posts} />
+      </div>
 
     </div>
   )

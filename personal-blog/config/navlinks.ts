@@ -8,7 +8,7 @@ export const navlinks = [
         label: "Blog",
     },
     {
-        href: "/about",
+        href: "/",
         label: "About",
     },
 ]
