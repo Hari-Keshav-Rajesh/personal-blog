@@ -9,7 +9,7 @@ import { siteConfig } from "@/config/site.config";
 import "@/lib/styles.css";
 
 import { formatDate } from "@/lib/formatDate";
-import CommentBox from "@/components/comment-box";
+import DisqusComments from "@/components/comment-box";
 
 async function getPosts() {
   const res = await fetch(
@@ -75,9 +75,8 @@ export default async function BlogPost({
             <NotionRenderer blockMap={blocks} />
             </div>
 
-
-            <div className="mt-10">
-            <CommentBox post={post} />
+            <div>
+              <DisqusComments post={post} />
             </div>
 
             <Link href="/blog">
