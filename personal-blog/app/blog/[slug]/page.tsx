@@ -105,7 +105,7 @@ export default async function BlogPost({
             .reverse()
             .map((blog: any) => (
                     <div className="mt-c5" key={blog.id}>
-                    <Link href="/slug" as={`blog/${blog.slug}`}>
+                    <Link href="/slug" as={`${blog.slug}`}>
                       <Card 
                       className="bg-inherit text-inherit h-fit w-fit bg-opacity-100 shadow-md duration-300 ease-in-out hover:scale-105 hover:bg-opacity-100 hover:shadow-lg border-none" 
                       >
