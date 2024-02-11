@@ -8,7 +8,15 @@ import { siteConfig } from "@/config/site.config";
 
 import "@/lib/styles.css";
 
+import {
+  Card,
+  CardContent,
+} from '@/components/ui/card';
+
+import Image from "next/image";
+
 import { formatDate } from "@/lib/formatDate";
+
 import DisqusComments from "@/components/comment-box";
 
 async function getPosts() {
@@ -45,6 +53,8 @@ export default async function BlogPost({
   }: {
     params: { slug: string };
   }){
+
+    const posts = await getPosts();
 
     const paths = await generateStaticParams();
     
@@ -85,6 +95,57 @@ export default async function BlogPost({
                 <div>Back to Blog</div>
                 </div>
             </Link>
+
+            <div className="mt-10 text-4xl font-bold">
+              You might also like
+            </div>
+
+            <div className="flex flex-col gap-3 md:grid md:grid-cols-2 xl:grid-cols-3">
+            {posts.filter((blog:any)=>blog.tags.some((blogTag:any)=>post.tags.includes(blogTag)) && blog.slug !== post.slug)
+            .reverse()
+            .map((blog: any) => (
+                    <div className="mt-c5" key={blog.id}>
+                    <Link href="/slug" as={`blog/${blog.slug}`}>
+                      <Card 
+                      className="bg-inherit text-inherit h-fit w-fit bg-opacity-100 shadow-md duration-300 ease-in-out hover:scale-105 hover:bg-opacity-100 hover:shadow-lg border-none" 
+                      >
+                        <CardContent className="p-8 bg-purple-900 bg-opacity-20 hover:bg-opacity-40">
+                          <div className="flex flex-col gap-5">
+
+                            <div>
+                              <Image
+                                src={blog.image_link}
+                                alt={blog.title}
+                                width={400}
+                                height={400} 
+                                unoptimized={true}
+                              />
+                            </div>
+
+                            <div className="flex flex-col">
+                              <div className="text-sm">{formatDate(blog.date)}</div>
+                              <div className="text-2xl font-bold">{blog.title}</div>
+                            </div>
+                              
+                            <div className="px-1 pb-0 pt-1">
+                            {blog.tags?.map((tag: any) => (
+                              <span
+                                key={tag}
+                                className="mb-2 mr-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700"
+                              >
+                                {tag}
+                              </span>
+                            ))}
+                          </div>
+
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </Link>
+                  </div>
+                  
+            ))}
+            </div>
       </div>
 
         
