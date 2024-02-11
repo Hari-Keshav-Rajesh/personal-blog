@@ -75,7 +75,7 @@ export default async function BlogPost({
             <NotionRenderer blockMap={blocks} />
             </div>
 
-            <div>
+            <div className="mt-16">
               <DisqusComments post={post} />
             </div>
 
