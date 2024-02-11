@@ -59,7 +59,6 @@ export default function BlogBox({blogs}: {blogs: any[]}){
                             </div>
 
                             <div>
-                                <Link href="/blog/slug" as={`blog/${post.slug}`}>
                                     <button 
                                     className='flex justify-center items-center
                                     bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full'
@@ -69,7 +68,6 @@ export default function BlogBox({blogs}: {blogs: any[]}){
                                             <Icons.arrowRight className='w-5 h-5' />
                                         </div>
                                     </button>
-                                </Link>
                             </div>
                             </div>
                         

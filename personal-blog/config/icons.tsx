@@ -3,6 +3,7 @@ import { ArrowLeft,
     Instagram,
     Twitter,
     Linkedin,
+    Github,
     Menu,
     Calendar,
     Clock
@@ -14,6 +15,7 @@ export const Icons = {
     instagram : Instagram,
     twitter: Twitter,
     linkedin: Linkedin,
+    github: Github,
     menu: Menu,
     calendar: Calendar,
     clock: Clock
